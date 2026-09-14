@@ -1,0 +1,112 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const POSTER =
+  'https://customer-wa9cpywo3l4jte5c.cloudflarestream.com/b57c8ba1ccfcac3f68aefcb6221de6b3/thumbnails/thumbnail.jpg?time=&height=600';
+
+const {
+  title = 'Secure AI Frameworks | Premium Domain for AI Security & Governance — $250,000',
+  description = 'SecureAIFrameworks.com is the exact-match domain for secure AI frameworks as global AI adoption accelerates. Offered at $250,000.',
+  ogImage = POSTER,
+  canonical = 'https://secureaiframeworks.com/',
+} = Astro.props;
+
+const siteName = 'Secure AI Frameworks';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="secure AI frameworks, AI security framework, AI governance, AI risk management, enterprise AI security, SecureAIFrameworks.com" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href={canonical} />
+    <meta name="google-site-verification" content="5LjMY7OUqzTBXxIQ9ge5HqqxT1SmqomiWwVIar-sKFc" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0b1018" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": siteName,
+      "url": "https://secureaiframeworks.com",
+      "description": description
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": title,
+      "description": description,
+      "url": canonical,
+      "primaryImageOfPage": { "@type": "ImageObject", "url": ogImage },
+      "datePublished": "2026-09-14",
+      "dateModified": "2026-09-14"
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "SecureAIFrameworks.com",
+      "description": "Exact-match premium domain for secure AI frameworks, governance, and enterprise AI security.",
+      "url": "https://secureaiframeworks.com",
+      "brand": { "@type": "Brand", "name": "Secure AI Frameworks" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://secureaiframeworks.com/#acquisition",
+        "price": "250000",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@type": "Organization", "name": "Desert Rich", "email": "sales@desertrich.com" }
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is SecureAIFrameworks.com valuable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the exact phrase for the category forming around worldwide AI adoption: secure AI delivered as frameworks for governance, risk, and control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the asking price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SecureAIFrameworks.com is offered at $250,000 USD. Inquiries: sales@desertrich.com."
+          }
+        }
+      ]
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>
