@@ -17,16 +17,16 @@ const STREAM_SRC =
           src={STREAM_SRC}
           title="Secure AI Frameworks hero video"
           loading="eager"
-          class="hero-stream absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-0"
+          class="hero-stream absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-0"
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowfullscreen="true"
         ></iframe>
-        {/* Light top fade on mobile so Stream remains visible above the copy */}
-        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 from-25% via-navy-950/45 via-55% to-navy-950/10 sm:from-30% sm:via-navy-950/55 sm:to-navy-950/20"></div>
+        {/* Bottom-weighted scrim: keep the upper Stream frame readable on phones */}
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 from-[18%] via-navy-950/75 via-[48%] to-transparent sm:from-[28%] sm:via-navy-950/55 sm:via-[60%] sm:to-navy-950/15"></div>
       </div>
 
       <div class="relative z-10 flex min-h-[min(92svh,44rem)] items-end sm:min-h-[min(78vh,40rem)] lg:min-h-[36rem]">
-        <div class="container-narrow w-full pb-8 pt-28 sm:pb-12 sm:pt-24">
+        <div class="container-narrow w-full pb-8 pt-36 sm:pb-12 sm:pt-24">
           <p class="mb-3 text-[10px] font-semibold uppercase tracking-widestx text-signal-300 sm:text-xs">
             AI Security · Governance · Risk · Control
           </p>
